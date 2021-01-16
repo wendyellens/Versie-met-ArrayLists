@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>SOFA - registreren</title>
+</head>
+<body>
+<h1>Leuk dat je klant wil worden!</h1>
+<h2>Registeer je hier als klant bij SOFA</h2>
+<p>Stap 1/4</p>
+<p>Word je een particuliere of zakelijke klant?</p>
+<P>Maak een keuze en klik op verder</P>
+        <form action="/register_Zakelijk_Particulier" method="post">
+
+            <input type="radio" name="zakelijkOfParticulier" id="particulier" value="0" th:checked="*{isNew}">
+            <label th:for="particulier">particulier</label><br>
+
+            <input type="radio" name="zakelijkOfParticulier" id="zakelijk" value="1" th:checked="*{isNew}">
+            <label for="zakelijk">zakelijk</label><br>
+
+            <input type="submit" name="verder" value="verder">
+</form>
+<p>Terug naar de <a href="/home">homepage</a></p> </p>
+</body>
+</html>

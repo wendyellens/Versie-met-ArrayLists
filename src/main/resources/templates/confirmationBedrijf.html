@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>SOFA - registreren</title>
+</head>
+<body>
+<h1>Registreer je hier als zakelijke klant</h1>
+<p>Stap 3/4</p>
+<p>Controleer hieronder of je gegevens kloppen.</p>
+
+<form action="confirmBedrijf" method="post" th:object="${klant}">
+    <table>
+        <tr>
+            <td><label for="Company_name">Bedrijfsnaam</label></td>
+            <td><input th:field="*{bedrijfsnaam}" name="Company_name"/></td>
+        </tr>
+        <tr>
+            <td><label for="Branch">Sector</label></td>
+            <td><input th:field="*{sector}"name="Branch"/></td>
+        </tr>
+        <tr>
+            <td><label for="KVK_number">KVK nummer</label></td>
+            <td><input th:field="*{KVKNummer}"name="KVK_number"/></td>
+        </tr>
+        <tr>
+            <td><label for="BTW_number">BTW nummer</label></td>
+            <td><input th:field="*{BTWNummer}"name="BTW_number"/></td>
+        </tr>
+        <tr>
+            <td><label for="Street">Straat</label></td>
+            <td><input th:field="*{straat}"name="Street"/></td>
+        </tr>
+        <tr>
+            <td><label for="House_number">Huisnummer</label></td>
+            <td><input th:field="*{huisnummer}" name="Street"/></td>
+        </tr>
+        <tr>
+            <td><label for="Postal_code">Postcode</label></td>
+            <td><input th:field="*{postcode}"name="Postal_code"/></td>
+        </tr>
+        <tr>
+            <td><label for="City">Woonplaats</label></td>
+            <td><input th:field="*{woonplaats}"name="City"/></td>
+        </tr>
+        <td></td>
+        <td><input type="submit" name="OK" value="Bevestigen"></td>
+
+        </tr>
+    </table>
+</form>
+
+</body>
+</html>

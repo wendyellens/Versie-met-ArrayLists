@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>SOFA - registreren</title>
+</head>
+<body>
+<h1>Nog even en je hebt je account... </h1>
+<p>Stap 4/4</p>
+<p>Maak hieronder je gebruikersnaam en wachtwoord aan</p>
+
+<form action="usernameForm" method="post" th:object="${usernameForm}">
+    <table>
+        <tr>
+            <td><label for="user_name">Gebruikersnaam</label></td>
+            <td><input type="text" name="user_name" th:field="*{userName}"/></td>
+        </tr>
+        <tr>
+            <td><label for="password">Wachtwoord</label></td>
+            <td><input type="password" name="password" th:field="*{password}"/></td>
+        </tr>
+        <td></td>
+        <td><input type="submit" name="OK" value="OK"><input type="reset" name="reset" value="Reset"></td>
+
+        </tr>
+    </table>
+</form>
+</body>
+</html>

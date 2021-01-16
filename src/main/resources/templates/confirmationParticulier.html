@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>SOFA - registreren</title>
+</head>
+<body>
+<h1>Registreer je hier als particuliere klant</h1>
+<p>Stap 3/4</p>
+<p>Controleer hieronder of je gegevens kloppen.</p>
+
+<form action="confirmParticulier" method="post" th:object="${backingBean}">
+    <table>
+        <tr>
+            <td><label for="First_name">Voornaam</label></td>
+            <td><input th:field="*{voornaam}" name="First_name"/></td>
+        </tr>
+        <tr>
+            <td><label for="Prefix">Voorvoegsels</label></td>
+            <td><input th:field="*{tussenvoegsels}"name="Prefix"/></td>
+        </tr>
+        <tr>
+            <td><label for="Last_name">Achternaam</label></td>
+            <td><input th:field="*{achternaam}"name="Last_name"/></td>
+        </tr>
+        <tr>
+            <td><label for="Birthday">Geboortedatum</label></td>
+            <td><input th:field="*{geboortedatum}" name="Birthday"></td>
+        </tr>
+        <tr>
+            <td><label for="BSN">Burgerservicenummer</label></td>
+            <td><input th:field="*{BSN}"name="BSN"/></td>
+        </tr>
+        <tr>
+            <td><label for="Street">Straat</label></td>
+            <td><input th:field="*{straat}"name="Street"/></td>
+        </tr>
+        <tr>
+            <td><label for="House_number">Huisnummer</label></td>
+            <td><input th:field="*{huisnummer}" name="Street"/></td>
+        </tr>
+        <tr>
+            <td><label for="Postal_code">Postcode</label></td>
+            <td><input th:field="*{postcode}"name="Postal_code"/></td>
+        </tr>
+        <tr>
+            <td><label for="City">Woonplaats</label></td>
+            <td><input th:field="*{woonplaats}"name="City"/></td>
+        </tr>
+        <td></td>
+        <td><input type="submit" name="OK" value="Bevestigen"></td>
+
+        </tr>
+    </table>
+</form>
+
+</body>
+</html>

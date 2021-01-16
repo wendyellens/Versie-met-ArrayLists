@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="https://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Overzichtspagina</title>
+    <meta name="author" content="Wendy Ellens">
+</head>
+<body>
+<h1>Welkom <span th:text="${ingelogde.getNaam()}"></span></h1>
+<h2>Je SOFA-rekeningen</h2>
+<p th:if="${ingelogde.rekeningen.isEmpty()}">Er zijn geen rekeningen om weer te geven</p>
+<table th:unless="${ingelogde.getRekeningen().isEmpty()}">
+    <tr>
+        <th>IBAN</th>
+        <th>Ten name van</th>
+        <th>Saldo</th>
+    </tr>
+    <tr th:each="rekening : ${ingelogde.getRekeningen()}">
+        <td><a th:href="${'/rekening/' + rekening.getIBAN()}" th:text="${rekening.getIBAN()}"></a></td>
+        <td th:text="${rekening.tenaamstelling}"></td>
+        <td th:text="${#numbers.formatDecimal(rekening.saldo, 1, 2, 'COMMA')}"></td>
+    </tr>
+</table>
+</body>
+</html>

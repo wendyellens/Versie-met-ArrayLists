@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Sofa - registreren</title>
+</head>
+<body>
+<h1>Registreer je hier als particuliere klant</h1>
+<p>Stap 2/4</p>
+<p>Vul hieronder je persoonlijke gegevens in</p>
+
+<form action="register_particulier" method="post">   <!-- th:object="${particulier} -->
+    <table>
+        <tr>
+            <td><label for="First_name">Voornaam</label></td>
+            <td><input name="First_name" value="Theo"/></td>
+        </tr>
+        <tr>
+            <td><label for="Prefix">Voorvoegsels</label></td>
+            <td><input name="Prefix" /></td>
+        </tr>
+        <tr>
+            <td><label for="Last_name">Achternaam</label></td>
+            <td><input name="Last_name" value="Janssen"/></td>
+        </tr>
+        <tr>
+            <td><label for="Birthday">Geboortedatum</label></td>
+            <td><input type="date" name="Birthday" value="1950-12-01"/></td>
+        </tr>
+        <tr>
+            <td><label for="BSN">Burgerservicenummer</label></td>
+            <td><input name="BSN" value="123456789"/></td>
+        </tr>
+        <tr>
+            <td><label for="Street">Straat</label></td>
+            <td><input name="Street" value="Rokin"/></td>
+        </tr>
+        <tr>
+            <td><label for="House_number">Huisnummer</label></td>
+            <td><input  name="House_number" value="14"/></td>
+        </tr>
+        <tr>
+            <td><label for="Postal_code">Postcode</label></td>
+            <td><input name="Postal_code" value="1234AB"/></td>
+        </tr>
+        <tr>
+            <td><label for="City">Woonplaats</label></td>
+            <td><input name="City" value="Amsterdam"/></td>
+        </tr>
+            <td></td>
+            <td><input type="submit" name="OK" value="OK"><input type="reset" name="reset" value="Reset"></td>
+
+        </tr>
+    </table>
+</form>
+<p>Terug naar de <a href="/home">homepage</a></p> </p>
+</body>
+</html>
